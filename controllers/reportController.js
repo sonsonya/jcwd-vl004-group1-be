@@ -91,7 +91,7 @@ module.exports = {
             let nextdate = new Date(Date.now() + (3600 * 1000 * 24));
             const sales = await Transactions.findAndCountAll({
                 where: {
-                    status: "approved request",
+                    status: "Delivered",
                     createdAt: {
                         [Op.gt] : date,
                         [Op.lt] : nextdate,
@@ -133,7 +133,7 @@ module.exports = {
             let nextdate = new Date(Date.now() + (3600 * 1000 * 24));
             const sales = await Transactions.findAndCountAll({
                 where: {
-                    status: "approved request",
+                    status: "Delivered",
                     createdAt: {
                         [Op.gt] : date,
                         [Op.lt] : nextdate,
@@ -158,7 +158,7 @@ module.exports = {
                     ['createdAt', 'DESC'],
                 ],
                 where: { 
-                    status: 'approved request',
+                    status: 'Delivered',
                     // createdAt: {
                     //     [Op.gte] : req.body.date,
                     //     [Op.lte] : req.body.enddate,
@@ -216,7 +216,7 @@ module.exports = {
                     ['updatedAt', 'DESC'],
                 ],
                 where: { 
-                    status: 'approved request',
+                    status: 'Delivered',
                     // createdAt: {
                     //     [Op.gte] : req.body.date,
                     //     [Op.lte] : req.body.enddate,
@@ -275,7 +275,7 @@ module.exports = {
                     [sequelize.literal('`revenue` DESC')]
                 ],
                 where: { 
-                    status: 'approved request',
+                    status: 'Delivered',
                     // createdAt: {
                     //     [Op.gte] : req.body.date,
                     //     [Op.lte] : req.body.enddate,
@@ -301,7 +301,7 @@ module.exports = {
                     [sequelize.literal('`revenue` ASC')]
                 ],
                 where: { 
-                    status: 'approved request',
+                    status: 'Delivered',
                     // createdAt: {
                     //     [Op.gte] : req.body.date,
                     //     [Op.lte] : req.body.enddate,
@@ -331,7 +331,7 @@ module.exports = {
                     'number',
                 ],
                 where: { 
-                    status: 'approved request',
+                    status: 'Delivered',
                     // createdAt: {
                     //     [Op.gte] : req.body.date,
                     //     [Op.lte] : req.body.enddate,
@@ -388,7 +388,7 @@ module.exports = {
                     ],
                 ],
                 where: { 
-                    status: 'approved request',
+                    status: 'Delivered',
                     // createdAt: {
                     //     [Op.gte] : req.body.date,
                     //     [Op.lte] : req.body.enddate,
